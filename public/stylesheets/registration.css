@@ -1,0 +1,35 @@
+.form-div {
+    margin-top: 150px;
+}
+.bg-dark{
+    border-radius: 1rem !important;
+
+}
+.form-section  {
+    margin: 0 400px;
+    border: 2px solid #053268;
+}
+
+.form-section  span {
+    display: block;
+}
+
+.form-control {
+    border: 1px solid #5c5f63 !important;
+}
+
+.form-select {
+    border: 1px solid #5c5f63 !important;
+
+}
+
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #6a11cb;
+
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgba(16, 17, 73, 1), rgba(37, 197, 52, 1));
+
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgba(106, 97, 120, 1), rgba(37, 117, 172, 1))
+}

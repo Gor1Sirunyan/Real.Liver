@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <title> ADMIN </title>-->
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <link rel="stylesheet" href="/stylesheets/login.css">
+    <link rel="stylesheet" href="/stylesheets/layout.css">
+    <link rel="stylesheet" href="/stylesheets/registration.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+          integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <script language="javascript" src="/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+
+
+    <link href="/assets/css/main.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="/javascripts/add_customers.js"></script>
+
+
+    <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+</head>
+<!--gradient-custom-->
+<body class="langWrap content ">
+<div id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+        <a href="/<%= language%>" class="logo d-flex align-items-center">
+            <!-- Uncomment the line below if you also wish to use an image logo -->
+            <!-- <img src="assets/img/logo.png" alt=""> -->
+            <h1>Empire LLC</h1>
+        </a>
+
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a href="/<%= language%>"><%= data.head_a_1%></a></li>
+                <li><a href="/<%= language%>/users/about"><%= data.head_a_2 %> </a></li>
+                <li class="dropdown"><a href="#"><span><%= data.head_a_3%></span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/<%= language%>/users/legal"><%= data.head_a_4%></a></li>
+                        <!--   <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>-->
+                        <!--  <ul>
+                              <li><a href="#">Deep Drop Down 1</a></li>
+                              <li><a href="#">Deep Drop Down 2</a></li>
+                              <li><a href="#">Deep Drop Down 3</a></li>
+                              <li><a href="#">Deep Drop Down 4</a></li>
+                              <li><a href="#">Deep Drop Down 5</a></li>
+                          </ul>-->
+                        </li>
+                        <li><a href="/<%= language%>/users/buyForMe"><%= data.head_a_8%></a></li>
+                        <li><a href="#">Drop Down 3</a></li>
+                        <li><a href="#">Drop Down 4</a></li>
+                    </ul>
+                <li><a class="active"  href="/<%= language%>/users/registration/"><%= data.head_a_5%></a></li>
+                <li><a href="/<%= language%>/auth/login"><%= data.head_a_6%></a></li>
+
+                <li><a href="/<%= language%>/users/contact"><%= data.head_a_7%></a></li>
+              <!--  <li><a class="get-a-quote" href="/<%= language%>/users/buyForMe"><%= data.head_a_8%></a></li>-->
+                <div class="dropdown"><a href="#"> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul style="width: 70px">
+                        <!--   <select>
+                               <option></option>
+                               <option></option>
+                               <option></option>
+                           </select>-->
+                        <div class="langWrap">
+                            <div><a href="/am/users/registration"  name="lang" class="active"><img
+                                            src="/assets/img/arm_lang.svg" class="img-fluid mb-1 mb-lg-0 " alt=""
+                                            width="20" height="16">
+                                  <!--  <i class="bi bi-chevron-down dropdown-indicator active"></i>--></a></div>
+                            <div><a href="/en/users/registration"  name="lang"><img src="/assets/img/en_lang.svg"
+                                                                            class="img-fluid mb-1 mb-lg-0" alt=""
+                                                                            width="20" height="16">
+                                   <!-- <i class="bi bi-chevron-down dropdown-indicator"></i>--></a></div>
+                            <div><a href="/ru/users/registration" name="lang"><img src="/assets/img/ru_lang.svg"
+                                                                           class="img-fluid mb-1 mb-lg-0" alt=""
+                                                                           width="20" height="16">
+                                 <!--   <i class="bi bi-chevron-down dropdown-indicator"></i>--></a></div>
+                        </div>
+                    </ul>
+                </div>
+                <li><a href="/<%= language%>/users/calc" ><i  style="font-size: 20px;" class="fa-solid fa-calculator"></i></a></li>
+            </ul>
+        </nav><!-- .navbar -->
+
+    </div>
+</div>
+<form id="contactForm" action="http://192.168.77.81:8080/api/register" novalidate
+      oninput="fullnumber.value = phone_code.value +' '+ number.value">
+    <section class="vh-100 gradient-custom">
+        <div class="col-lg-3 card bg-dark text-white form-section p-3 m-auto mt-5">
+            <h1 class="text-white text-center head_e_1"><%= data.head_a_5%> </h1>
+            <label for="name" class="reg_name"><%= data.reg_1%></label><span class="text-danger span1"> *</span>
+            <input placeholder="<%= data.reg_1%>*" class="reg_name_place form-control mt-1" type="text" name="name"
+                   id="inputP"><br>
+            <!--    <span class="name text-danger"></span>-->
+            <label for="email" class="reg_email"><%= data.reg_2%></label><span class="text-danger"> *</span>
+            <input placeholder="<%= data.reg_2%>*" type="email" name="email" class="form-control mt-1 reg_email_place"><br>
+            <span class="email text-danger"></span>
+            <label for="password" class="reg_password"><%= data.reg_3%></label><span class="text-danger"> *</span>
+            <input placeholder="<%= data.reg_3%>*" type="password" name="password"
+                   class="form-control mt-1 reg_password_place"><br>
+            <span class="password text-danger"></span>
+            <label for="password_confirm" class="reg_r_password"><%= data.reg_4%></label><span
+                    class="text-danger"> *</span>
+            <input placeholder="<%= data.reg_4%>*" type="password" name="password_confirm"
+                   class="form-control mt-1 reg_r_password_place"><br>
+            <span class="password_confirm text-danger"></span>
+            <div class="apn" id="apn">
+                <div class="addPhoneNumbers" id="addPhoneNumbers">
+                    <div class="mb-3">
+                        <select style="width: 160px;display: inline" class="c_name form-select " name="country_id">
+
+                            <% country.forEach(function(row){ %>
+                                <option
+                                <% if(row.name == "Armenia"){ %> selected
+                                        <% } %>
+                                                                 value='<%= row.id %>'><%= row.name %></option>
+                            <% }) %>
+
+                        </select>
+
+                        <input value="+374" readonly id="c_code" style="width: 80px;display: inline" type="text"
+                               class="phn form-control c_code" name="phone_code" placeholder="Կոդը">
+                        <input type="number" placeholder="<%= data.reg_5%>" class="input_phn form-control reg_phone"
+                               oninput='chk(event)' style="width: 190px;display: inline" id="telephone"
+                               minlength="17" maxlength="17" required name="number">
+                        <input class="form-control mt-5" type="hidden" name="fullnumber" id="">
+                    </div>
+
+                </div>
+            </div>
+
+            <button class="btn btn-success sub reg_submit" type="submit"><%= data.reg_6%></button>
+        </div>
+
+    </section>
+</form>
+<!--<div>
+
+    <a href="#" language="armenian" class="active">arm</a>
+    <a href="#" language="english">en</a>
+    <a href="#" language="russian">rus</a>
+</div>
+<div class="content">
+    <p class="description">
+        fjhgjfgbgjbgjbjg
+    </p>
+</div>-->
+</body>
+<!--Vendor JS Files-->
+<script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="/assets/vendor/aos/aos.js"></script>
+<script src="/assets/vendor/php-email-form/validate.js"></script>
+
+<!-- Template Main JS File -->
+<script src="/js/main.js"></script>
+
+
+<script src="/plugins/bower_components/jquery/dist/jquery.min.js"></script>
+
+<script src="/js/app-style-switcher.js"></script>
+
+<script src="/js/waves.js"></script>
+
+<script src="/js/sidebarmenu.js"></script>
+
+<script src="/js/custom.js"></script>
+
+<script src="/js/inputmask.js"></script>
+
+<script src="/js/jquery_ui.js"></script>
+
+
+<script src="/path/to/jquery-input-mask-phone-number.min.js"></script>
+
+
+<script>
+
+</script>
+<script>
+
+
+    $('#contactForm').submit(function (e) {
+        e.preventDefault(); // avoid to execute the actual submit of the form.
+        var form = $(this);
+        var url = form.attr('action');
+        $(`.validErrors`).remove();
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: form.serialize(), // serializes the form's elements.
+            success: function (data) {
+                console.log(data)
+                alert("Խնդրում ենք ստուգել եւ հաստատտել Ձեր էլ․ հասցեն։")
+                (location.href = 'http://localhost:1895/<%= language%>/auth/login')
+            },
+            error: function (err) {
+                if (err && err.responseJSON) {
+                    let errors = err.responseJSON;
+                    for (let i in errors) {
+                        $(`input[name="${i}"]`).after(`<span class="text-danger validErrors " >${errors[i][0]}</span> `);
+                    }
+                }
+            }
+        });
+
+    });
+
+    $(document).on('change', '.c_name', function (e) {
+        var id = e.target.value;
+        $.ajax({
+            url: "/users/addPhoneNumber/",
+            type: 'GET',
+            success: function (data) {
+
+                $(e.target).parent('div').find('.c_code:first').empty().val(`${data[id - 1].code}`)
+            }
+        });
+    })
+</script>
+</html>

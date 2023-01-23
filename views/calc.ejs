@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+
+    <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link rel="stylesheet" href="/stylesheets/calc.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+          rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="/assets/css/main.css" rel="stylesheet">
+    <script type="text/javascript" src="/javascripts/add_customers.js"></script>
+
+    <!-- =======================================================
+    * Template Name: Logis - v1.1.0
+    * Template URL: https://bootstrapmade.com/logis-bootstrap-logistics-website-template/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+</head>
+
+<body>
+<!-- ======= Header ======= -->
+<div id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+        <a href="/<%= language%>" class="logo d-flex align-items-center">
+            <!-- Uncomment the line below if you also wish to use an image logo -->
+            <!-- <img src="assets/img/logo.png" alt=""> -->
+            <h1>Empire LLC</h1>
+        </a>
+
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a href="/<%= language%>"><%= data.head_a_1%></a></li>
+                <li><a class="active" href="/<%= language%>/users/about"><%= data.head_a_2 %></a></li>
+                <li class="dropdown"><a href="#"><span><%= data.head_a_3%></span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        <li><a href="/<%= language%>/users/legal"><%= data.head_a_4%></a></li>
+                        <!--   <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>-->
+                        <!--  <ul>
+                              <li><a href="#">Deep Drop Down 1</a></li>
+                              <li><a href="#">Deep Drop Down 2</a></li>
+                              <li><a href="#">Deep Drop Down 3</a></li>
+                              <li><a href="#">Deep Drop Down 4</a></li>
+                              <li><a href="#">Deep Drop Down 5</a></li>
+                          </ul>-->
+                        </li>
+                        <li><a  href="/<%= language%>/users/buyForMe"><%= data.head_a_8%></a></li>
+                        <li><a href="#">Drop Down 3</a></li>
+                        <li><a href="#">Drop Down 4</a></li>
+                    </ul>
+                <li><a href="/<%= language%>/users/registration/"><%= data.head_a_5%></a></li>
+                <li><a href="/<%= language%>/auth/login"><%= data.head_a_6%></a></li>
+
+                <li><a href="/<%= language%>/users/contact"><%= data.head_a_7%></a></li>
+                <!--     <li><a class="get-a-quote" href="/<%= language%>/users/buyForMe"><%= data.head_a_8%></a></li>-->
+                <div class="dropdown"><a href="#"> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul style="width: 70px">
+                        <!--   <select>
+                               <option></option>
+                               <option></option>
+                               <option></option>
+                           </select>-->
+                        <div class="langWrap">
+                            <div><a href="/am/users/about"  name="lang"><img
+                                            src="/assets/img/arm_lang.svg" class="img-fluid mb-1 mb-lg-0 " alt=""
+                                            width="20" height="16">
+                                    <!-- <i class="bi bi-chevron-down dropdown-indicator"></i>--></a></div>
+                            <div><a href="/en/users/about"  name="lang"><img src="/assets/img/en_lang.svg"
+                                                                             class="img-fluid mb-1 mb-lg-0" alt=""
+                                                                             width="20" height="16">
+                                    <!--   <i class="bi bi-chevron-down dropdown-indicator"></i>--></a></div>
+                            <div><a href="/ru/users/about" name="lang"><img src="/assets/img/ru_lang.svg"
+                                                                            class="img-fluid mb-1 mb-lg-0" alt=""
+                                                                            width="20" height="16">
+                                    <!-- <i class="bi bi-chevron-down dropdown-indicator"></i>--></a></div>
+                        </div>
+                    </ul>
+                </div>
+                <li><a href="/<%= language%>/users/calc" ><i  style="font-size: 20px;" class="fa-solid fa-calculator"></i></a></li>
+            </ul>
+        </nav><!-- .navbar -->
+
+    </div>
+</div>
+<!-- End Header -->
+
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="hero d-flex align-items-center">
+    <div class="container">
+        <div class="row gy-4 d-flex justify-content-between">
+            <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
+                <h2 data-aos="fade-up">Your Lightning Fast Delivery Partner</h2>
+                <p data-aos="fade-up" data-aos-delay="100">Facere distincenderit</p>
+
+                <form action="#" class="form-search d-flex align-items-stretch mb-3" data-aos="fade-up"
+                      data-aos-delay="200">
+                    <input type="text" class="form-control" placeholder="ZIP code or CitY">
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </form>
+
+                <div class="row gy-4" data-aos="fade-up" data-aos-delay="400">
+
+                    <div class="col-lg-3 col-6">
+                        <div class="stats-item text-center w-100 h-100">
+                            <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"
+                                  class="purecounter"></span>
+                            <p>Clients</p>
+                        </div>
+                    </div><!-- End Stats Item -->
+
+                    <div class="col-lg-3 col-6">
+                        <div class="stats-item text-center w-100 h-100">
+                            <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1"
+                                  class="purecounter"></span>
+                            <p>Projects</p>
+                        </div>
+                    </div><!-- End Stats Item -->
+
+                    <div class="col-lg-3 col-6">
+                        <div class="stats-item text-center w-100 h-100">
+                            <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1"
+                                  class="purecounter"></span>
+                            <p>Support</p>
+                        </div>
+                    </div><!-- End Stats Item -->
+
+                    <div class="col-lg-3 col-6">
+                        <div class="stats-item text-center w-100 h-100">
+                            <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1"
+                                  class="purecounter"></span>
+                            <p>Workers</p>
+                        </div>
+                    </div><!-- End Stats Item -->
+
+                </div>
+            </div>
+
+            <div class="col-lg-5 order-1 order-lg-2 hero-img" data-aos="zoom-out">
+                <img src="/assets/img/hero-img.svg" class="img-fluid mb-3 mb-lg-0" alt="">
+            </div>
+
+        </div>
+    </div>
+</section><!-- End Hero Section -->
+
+<main id="main">
+    <section id="get-a-quote" class="get-a-quote">
+        <div class="container-fluid py-5 mx-auto">
+            <div class="row d-flex justify-content-center">
+                <div class="col-xl-7 col-lg-8 col-md-9 col-11">
+                    <div class="form-row">
+                        <h3 class="text-center">Shipping Calculator</h3>
+                        <form class="php-email-form" method="get">
+                            <div class="row gy-4">
+                                <div class="form-group col-12 flex-column d-flex" style="width: 33.3333333333%;">
+                                    <label class="form-control-label px-3">Select your country</label>
+                                    <select class="form-control" name="country_select" id="country_select">
+                                        <option value="1">Armenia</option>
+                                        <option value="2">Russia</option>
+                                        <option value="3">USA</option>
+                                        <option value="4">Canada</option>
+                                        <option value="5">China</option>
+                                    </select>
+                                </div>
+                                <div class="form-group mb-2" style="width: 33.3333333333%;">
+                                    <label>City</label>
+                                    <input class="form-control" type="text" name="city" id="city"
+                                           data-ajax-input="city">
+                                </div>
+                                <div class="form-group mb-2" style="width: 33.3333333333%;">
+                                    <label>Postal code</label>
+                                    <input class="form-control" type="text" name="postal_code" id="postal_code"
+                                           data-ajax-input="postal_code">
+                                </div>
+                                <div class="shipping__packages d-flex flex-column gap-5">
+                                    <div class="shipping__block">
+                                        <h5>Shipping weight</h5>
+                                        <p style="margin-left: 800px;color: red">1կգ արժեքը 6000 դրամ</p>
+                                        <p style="margin-left: 760px;color: red">(Բացի գերծավալային բեռներից) </p>
+                                        <a data-tippy-content="Ֆիզիկական անձանց հ իրականացվում է 2000 դր/կգ, ԱՄՆ, Անգլիա, Իտդր/կգ, Չինաստան՝ 6000 դրամ/կգ։"
+                                           href="#" class="parcel__icon ver-top-box sprite-b sprite-a"
+                                           aria-describedby="tippy-1"></a>
+                                        <div class="form-row" style="display: flex;align-items: center; gap: 10px">
+                                            <div class="form-group col-md-9 mb-2">
+                                                <input type="range" id="weight_range" name="weight_range" value="0.1"
+                                                       onchange="Sum(this.value)"
+                                                       class="form-range weight_range"
+                                                       oninput="weight_value.value=weight_range.value"
+                                                       min="0.1" max="100" step="0.1">
+                                            </div>
+                                            <div class="form-group col-md-3"
+                                                 style="display: flex;align-items: center; gap: 10px">
+                                                <input type="number" class="form-control weight_value"
+                                                       name="weight_value"
+                                                       onkeypress="noSimbols(event)" id="weight_value" value="0.1"
+                                                       min="0.1" max="100" step="0.1"
+                                                       oninput="weight_range.value=weight_value.value;chk4(event)"
+                                                       data-ajax-input="shipping__block.0.weight">
+                                                <select class="form-control weight_select" id="weight_select"
+                                                        name="weight">
+                                                    <option value="Kg">Kg</option>
+                                                    <option value="Ibs">Ibs</option>
+                                                </select>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-12 mb-4 addMoreDiv" id="addMoreDiv">
+                                            <div class="form-check check_div">
+                                                <input class="form-check-input addMore" type="checkbox" value="0"
+                                                       id="flexCheckChecked" >
+                                                <label class="form-check-label" for="flexCheckChecked">
+                                                    Package dimensions
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control weight_price" readonly name="weight_price"
+                                       id="weight_price" value="600"
+                                       style="width: 200px!important;"
+                                       data-ajax-input="shipping__block.0.weight">
+                                <!--              <div class="col-xs-12 text-center add_package">
+                                                  <button type="button" class="btn btn-link" id="add_package"
+                                                          style="border: none; outline: none;">
+                                                      <i class="fa fa-plus fa-fw"></i>
+                                                      Add another package
+                                                  </button>
+                                              </div>-->
+
+                                <!--              <div class="row justify-content-center mt-2 ">
+                                                  <div class="form-group col-sm-6">
+                                                      <button type="button" id="submit" onclick="Sum()"
+                                                              class="btn-block btn-primary">Calculate
+                                                      </button>
+
+                                                  </div>
+                                              </div>-->
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--
+        <button type="button" class="modal__close" data-dismiss="modal">X</button>
+    -->
+</main><!-- End #main -->
+<!-- ======= Footer ======= -->
+<footer id="footer" class="footer">
+
+    <div class="container">
+        <div class="row gy-4">
+            <div class="col-lg-5 col-md-12 footer-info">
+                <a href="/<%= language%>/users/buyForMe" class="logo d-flex align-items-center">
+                    <span>Empire LLC</span>
+                </a>
+                <p>Cras fermentum odio eu feugiaiaculis eu non diam phasellus.</p>
+                <ul>
+                    <li><a href="/<%= language%>/users/prohibited"><%= data.footer_1%></a></li>
+                    <li><a href="/<%= language%>/users/provisions"><%= data.footer_2%></a></li>
+                    <li><a href="/<%= language%>/users/security"><%= data.footer_3%></a></li>
+                </ul>
+                <div class="cards__list" style="justify-content: flex-start">
+                    <img src="/assets/img/payments/Visa.webp"  alt="">
+                    <img src="/assets/img/payments/Mastercard.webp" alt="">
+                    <img src="/assets/img/payments/Mobidram.webp" alt="">
+                    <img src="/assets/img/payments/telcell.webp" alt="">
+                    <img src="/assets/img/payments/easypay.webp" alt="">
+                    <img src="/assets/img/payments/Visa.webp" alt="">
+                    <img src="/assets/img/payments/idram.webp" alt="">
+
+                </div>
+                <div class="social-links d-flex mt-4">
+                    <a target="_blank" href="https://twitter.com/?lang=en" class="twitter"><i class="bi bi-twitter"></i></a>
+                    <a target="_blank" href="https://www.facebook.com/" class="facebook"><i class="bi bi-facebook"></i></a>
+                    <a target="_blank" href="https://www.instagram.com/?hl=en" class="instagram"><i class="bi bi-instagram"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-6 footer-links">
+                <h4> <%= data.footer_11%></h4>
+                <ul>
+                    <li><a href="/<%= language%>"><%= data.head_a_1%></a></li>
+                    <li><a href="#"><%= data.head_a_2%></a></li>
+                    <li><a href="/<%= language%>/users/registration"><%= data.head_a_5%></a></li>
+                    <li><a href="#">Terms of service</a></li>
+                    <li><a href="#">Privacy policy</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-6 footer-links">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="#">Web Design</a></li>
+                    <li><a href="#">Web Development</a></li>
+                    <li><a href="#">Product Management</a></li>
+                    <li><a href="#">Marketing</a></li>
+                    <li><a href="#">Graphic Design</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+                <h4><%= data.head_a_2 %></h4>
+                <p>
+                    <%= data.footer_4%><br>
+                    <%= data.footer_5%> <br>
+                    <%= data.footer_6%> <br><br>
+                    <strong> <%= data.footer_7%></strong> +374 66 666 666<br>
+                    <strong> <%= data.footer_8%></strong> info@example.com<br>
+                </p>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <div class="copyright">
+            &copy; <%= data.footer_9%> ․<strong><span> Empire LLC</span></strong>.  <%= data.footer_10%>
+        </div>
+        <div class="credits">
+            <!-- All the links in the footer should remain intact. -->
+            <!-- You can delete the links only if you purchased the pro version. -->
+            <!-- Licensing information: https://bootstrapmade.com/license/ -->
+            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/logis-bootstrap-logistics-website-template/ -->
+            <a href="https://itresources.am//">ITRESOURCES</a>
+        </div>
+    </div>
+
+</footer>
+
+<!-- End Footer -->
+
+<a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<div id="preloader"></div>
+
+<!-- Vendor JS Files -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="/js/app-style-switcher.js"></script>
+
+<script src="/js/waves.js"></script>
+
+<script src="/js/sidebarmenu.js"></script>
+
+<script src="/js/custom.js"></script>
+
+<script src="/js/inputmask.js"></script>
+
+<script src="/js/jquery_ui.js"></script>
+
+
+<script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="/assets/vendor/aos/aos.js"></script>
+<script src="/assets/vendor/php-email-form/validate.js"></script>
+
+<!-- Template Main JS File -->
+<script src="/js/main.js"></script>
+
+<script>
+
+    function noS(event) {
+        if ("e=?@#`~!<>)([]{}-_".indexOf(event.key) != -1)
+            event.preventDefault();
+    }
+
+    $(document).ready(function () {
+        $('input[type="checkbox"]').click(function () {
+            if ($(this).prop("checked") == true) {
+                //      console.log("Checkbox is checked.");
+            } else if ($(this).prop("checked") == false) {
+                //    console.log("Checkbox is unchecked.");
+            }
+        });
+    });
+
+
+    function noSimbols(event) {
+        if ("ABCDEFGHIJKLMNOPQRSTUVWXYZ-+=?@#`~!<>)([]{}abcdefghijklmnopqrstuvwxyz".indexOf(event.key) != -1)
+            event.preventDefault();
+    }
+
+    document.getElementById("weight_value").addEventListener("input", function () {
+        document.getElementById("weight_price").value = Math.floor(this.value * 6000);
+    });
+    document.getElementById("weight_range").addEventListener("input", function () {
+        document.getElementById("weight_price").value = Math.floor(this.value * 6000);
+    });
+
+
+    // function myFunction() {
+    //
+    //     if (x == false) {
+    //   console.log(x)
+    //         document.getElementById("weight_value").addEventListener("input", function () {
+    //             document.getElementById("weight_price").value = this.value * 6000;
+    //         });
+    //         document.getElementById("weight_range").addEventListener("input", function () {
+    //             document.getElementById("weight_price").value = this.value * 6000;
+    //         });
+    //     }
+    // }
+
+    $('.check_div :checkbox').change(function () {
+        var $this = $(this);
+        if ($this.is(':checked')) {
+
+            //    var newInput = $('');
+
+            $('.check_div').append(' <div class="addme" style="margin-left: 350px;margin-top: 30px">\n' +
+                '<select id="sel_op" class="phn form-control sel_op" name="length_type_select" style="width: 80px;height:47px;display: inline">\n' +
+                '<option selected value="սմ">սմ</option>\n' +
+                '<option value="դյույմ">դյույմ</option>\n' +
+                '<option value="մ">մ</option>\n' +
+                '</select>' +
+                '<input onkeyup="Sum(event)" onclick="Sum(event)" style="width: 80px;display: inline;margin-left: 30px" type="number" min="0" id="length_a" onkeypress="noS(event)" oninput=\'chk1(event)\'\n' +
+                'class="phn form-control c_code v_3m1" name="length_a" placeholder="0">\n' +
+                '<input onkeyup="Sum(event)" onclick="Sum(event)" style="width: 80px;display: inline;margin-left: 30px" type="number" min="0" id="length_b" onkeypress="noS(event)" oninput=\'chk2(event)\'\n' +
+                'class="phn form-control c_code v_3m2" name="length_b" placeholder="0">\n' +
+                '<input onkeyup="Sum(event)" onclick="Sum(event)" style="width: 80px;display: inline;margin-left: 30px" type="number" min="0" id="length_c" onkeypress="noS(event)" oninput=\'chk3(event)\'\n' +
+                'class="phn form-control c_code v_3m3" name="length_c" placeholder="0">' +
+                ' <input readonly hidden style="width: 200px;display: inline;margin-left: 30px" type="number" min="0"id="sum"     class="phn form-control" name="sum" >' +
+                '</div>'
+            );
+        } else {
+            $('.check_div').find('.addme').remove();
+            Sum();
+        }
+    });
+
+
+    function Sum(val, val1, val2, val3) {
+        var x = document.getElementById("flexCheckChecked").checked;
+        if (x == true) {
+            var str = $(".sel_op option:selected").val()
+            val1 = $('#length_a').val()
+            val2 = $('#length_b').val()
+            val3 = $('#length_c').val()
+            val = $('.weight_value').val()
+            document.getElementsByClassName('weight_value').value = val;
+            let gumar = 0;
+            if (str == "մ") {
+                let x = val1 * val2 * val3 * 1000 / 6;
+                if ((val1 + val2 + val3 > 1.5) && (x > 2 * val)) {
+                    gumar = Math.floor(x * 4500);
+                    $('#weight_price').val(gumar);
+                } else {
+                    $('#weight_price').val(Math.floor(6000 * val));
+                }
+            } else if (str == "դյույմ") {
+                let x = val1 * val2 * val3 * 2.54 * 2.54 * 2.54 / 6000;
+                console.log(x)
+                if (((val1 + val2 + val3) > 60) && (x > 2 * val)) {
+                    gumar = Math.floor(x * 4500);
+                    $('#weight_price').val(gumar);
+                } else {
+                    $('#weight_price').val(Math.floor(6000 * val));
+                }
+            } else if (str == "սմ") {
+                let x = val1 * val2 * val3 / 6000;
+                if (((val1 + val2 + val3) > 150) && (x > 2 * val)) {
+                    gumar = Math.floor(x * 4500);
+                    $('#weight_price').val(gumar);
+                } else {
+                    $('#weight_price').val(Math.floor(6000 * val));
+                }
+            }
+            $('.sel_op').change(function () {
+                var str = $(".sel_op option:selected").val()
+                if (str == "մ") {
+                    let x = val1 * val2 * val3 * 1000 / 6;
+                    if ((val1 + val2 + val3 > 1.5) && (x > 2 * val)) {
+                        gumar = Math.floor(x * 4500);
+                        $('#weight_price').val(gumar);
+                    } else {
+                        $('#weight_price').val(Math.floor(6000 * val));
+                    }
+                } else if (str == "դյույմ") {
+                    let x = val1 * val2 * val3 * 2.54 * 2.54 * 2.54 / 6000;
+                    if (((val1 + val2 + val3) > 60) && (x > 2 * val)) {
+                        gumar = Math.floor(x * 4500);
+                        $('#weight_price').val(gumar);
+                    } else {
+                        $('#weight_price').val(Math.floor(6000 * val));
+                    }
+                } else if (str == "սմ") {
+                    let x = val1 * val2 * val3 / 6000;
+                    if (((val1 + val2 + val3) > 150) && (x > 2 * val)) {
+                        gumar = Math.floor(x * 4500);
+                        $('#weight_price').val(gumar);
+                    } else {
+                        $('#weight_price').val(Math.floor(6000 * val));
+                    }
+                }
+            })
+        }
+        else{
+                 let y=document.getElementById("weight_value").value;
+                document.getElementById("weight_price").value = Math.floor(y * 6000);
+
+        }
+    }
+
+    /*    $("#add_package").click(function () {
+
+           $(".shipping__packages").append(
+               `
+      <div class="form-row" style="display: flex;align-items: center; gap: 10px">
+                                               <div class="form-group col-md-9 mb-2">
+                                                   <input type="range" id="weight_range" name="weight_range" value="0"
+                                                          onchange="Calc(this.value);Calc1(this.value)"
+                                                          class="form-range weight_range"
+                                                          min="0.1" max="100" step="0.1">
+                                               </div>
+
+                                               <div class="form-group col-md-3"
+                                                    style="display: flex;align-items: center; gap: 10px">
+                                                   <input type="text" class="form-control" readonly name="weight_price"
+                                                          onkeypress="noSimbols(event)" id="weight_price" value="300"
+                                                          style="width: 100px!important;"
+                                                          data-ajax-input="shipping__block.0.weight">
+                                                   <input type="text" class="form-control weight_value" name="weight_value"
+                                                          onkeypress="noSimbols(event)" id="weight_value" value="0.1"
+                                                          data-ajax-input="shipping__block.0.weight">
+                                                   <select class="form-control weight_select" id="weight_select"
+                                                           name="weight">
+                                                       <option value="">Kg</option>
+                                                       <option value="Ibs">Ibs</option>
+                                                   </select>
+                                               </div>
+
+                                           </div>
+                     <div class="col-md-12 mb-4 addMoreDiv" id="addMoreDiv">
+                                               <div class="form-check check_div">
+                                                   <input class="form-check-input addMore" type="checkbox" value="0"
+                                                          id="flexCheckChecked">
+                                                   <label class="form-check-label" for="flexCheckChecked">
+                                                       Package dimensions
+                                                   </label>
+                                               </div>
+                                           </div>
+                        `
+           );
+
+       });*/
+</script>
+</body>
+</html>
+
+

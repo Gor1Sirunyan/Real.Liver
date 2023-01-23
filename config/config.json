@@ -1,0 +1,15 @@
+{
+  "development": {
+    "username": "root",
+    "password": "",
+    "database": "glob",
+    "host":"127.0.0.1",
+    "dialect": "mysql",
+    "pool": {
+      "max": 20,
+      "min": 0,
+      "idle": 650000,
+      "acquire": 1000000
+    }
+  }
+}
